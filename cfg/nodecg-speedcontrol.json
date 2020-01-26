@@ -1,0 +1,4 @@
+{
+  "twitch": { "enabled": false },
+  "schedule": { "ignoreGamesWhileImporting": [ "WASD" ] }
+}
