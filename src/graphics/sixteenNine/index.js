@@ -1,8 +1,8 @@
-import m from 'mithril';
-import { row, column } from '../common.css';
+import m from 'mithril'; import { row, column } from '../common.css';
 import {
   container, game, camera, sponsors, sponsorsInset, timer, timerText,
-  timerEstimate, runDetails, runGame, runMoreDetails, playerDetails,
+  timerEstimate, runDetails, runGame, runMoreDetails, playerDetails, playerIcon,
+  playerTile,
 } from './sixteenNine.css';
 
 const timerRep = window.NodeCG.Replicant('timer', 'nodecg-speedcontrol');
@@ -25,7 +25,16 @@ const blankRun = {
 
 const safeRun = () => (runRep.value || blankRun);
 
-class SixteenNineComponent {
+const PlayerTileComponent = {
+  view(vnode) {
+    const { name } = vnode.attrs;
+    return m('div', { class: `${row} ${playerTile}` },
+      m('div', { class: playerIcon }),
+      m('span', name));
+  },
+};
+
+const SixteenNineComponent = {
   view() {
     return m('div', { class: container },
       m('div', { class: game }),
@@ -43,9 +52,10 @@ class SixteenNineComponent {
           m('div', safeRun().release),
           m('span', '·'),
           m('div', safeRun().category))),
-      m('div', { class: `${column} ${playerDetails}` }));
-  }
-}
+      m('div', { class: `${row} ${playerDetails}` },
+        ...safeRun().teams[0].players.map((player) => m(PlayerTileComponent, player))));
+  },
+};
 
 window.NodeCG.waitForReplicants(timerRep, runRep).then(() => {
   m.mount(document.body, SixteenNineComponent);

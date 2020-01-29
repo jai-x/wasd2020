@@ -82,4 +82,28 @@ body {
 }
 
 .playerDetails {
+  position: absolute;
+  top: 0px; left: 0px;
+  width: 539px; height: 475px;
+  justify-content: start;
+  align-items: end;
+  align-content: end;
+  flex-flow: row wrap;
+}
+
+.playerTile {
+  font-size: 30px;
+  background: linear-gradient(to right, var(--wasd-purple), var(--wasd-blue-2));
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 5px 15px;
+  font-family: 'MontserratBold';
+}
+
+.playerIcon {
+  width: 27px; height: 27px;
+  background-image: url('./player.png');
+  background-position: center;
+  background-size: cover;
+  margin-right: 15px;
 }
