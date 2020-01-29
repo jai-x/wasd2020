@@ -1,0 +1,81 @@
+.background {
+  background: linear-gradient(
+    230deg,
+    var(--wasd-white),
+    var(--wasd-blue-2),
+    var(--wasd-blue-3),
+    var(--wasd-purple)
+  );
+}
+
+.game {
+  position: absolute;
+  top: 0px; right: 0px;
+  width: 1296px; height: 972px;
+  background-color: var(--chroma-green);
+
+  border-left: 3px solid var(--wasd-grey-2);
+}
+
+.runDetails {
+  font-family: 'DaggerSquareOblique';
+  color: var(--wasd-white);
+
+  position: absolute;
+  left: 0px; top: 0px;
+  width: 624px; height: 140px;
+}
+
+.runGame {
+  font-size: 41px;
+  margin-bottom: 7px;
+}
+
+.runMoreDetails {
+  font-size: 27px;
+}
+
+.runMoreDetails span {
+  margin: 0 10px;
+}
+
+.timer {
+  font-family: 'DaggerSquareOblique';
+  color: var(--wasd-white);
+
+  position: absolute;
+  left: 0px; top: 140px;
+  width: 624px; height: 130px;
+
+  border-top: 5px solid;
+  border-image: linear-gradient(to right, transparent, var(--wasd-white), transparent) 1;
+}
+
+.timerText {
+  font-size: 70px;
+}
+
+.timerEstimate {
+  font-size: 20px;
+}
+
+.camera {
+  position: absolute;
+  top: 270px; left: 0px;
+  width: 624px; height: 400px;
+  background-color: var(--chroma-green);
+  border-top: 3px solid var(--wasd-grey-2);
+  border-bottom: 3px solid var(--wasd-grey-2);
+}
+
+.sponsors {
+  position: absolute;
+  bottom: 0px; left: 0px;
+  width: 624px; height: 302px;
+}
+
+.sponsorsInset {
+  width: 90%; height: 90%;
+  border: 5px solid;
+  border-image: linear-gradient(transparent, var(--wasd-white), transparent) 1;
+}

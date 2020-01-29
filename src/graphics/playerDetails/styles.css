@@ -5,16 +5,17 @@
   justify-content: start;
   align-items: end;
   align-content: end;
-  flex-flow: row wrap;
+  flex-flow: row wrap-reverse;
 }
 
 .playerTile {
-  font-size: 30px;
+  font-family: 'MontserratBold';
+  color: var(--wasd-white);
+  font-size: 27px;
   background: linear-gradient(to right, var(--wasd-purple), var(--wasd-blue-2));
   margin-bottom: 10px;
   margin-left: 10px;
   padding: 5px 15px;
-  font-family: 'MontserratBold';
 }
 
 .playerIcon {
