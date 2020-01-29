@@ -1,9 +1,11 @@
-import m from 'mithril'; import { row, column } from '../common.css';
+import m from 'mithril';
+import PlayerDetailsComponent from '../playerDetails';
+
+import { row, column, graphic } from '../common.css';
 import {
-  container, game, camera, sponsors, sponsorsInset, timer, timerText,
-  timerEstimate, runDetails, runGame, runMoreDetails, playerDetails, playerIcon,
-  playerTile,
-} from './sixteenNine.css';
+  background, game, camera, sponsors, sponsorsInset, timer, timerText,
+  timerEstimate, runDetails, runGame, runMoreDetails, playerDetailsContainer,
+} from './styles.css';
 
 const timerRep = window.NodeCG.Replicant('timer', 'nodecg-speedcontrol');
 const runRep = window.NodeCG.Replicant('runDataActiveRun', 'nodecg-speedcontrol');
@@ -25,18 +27,9 @@ const blankRun = {
 
 const safeRun = () => (runRep.value || blankRun);
 
-const PlayerTileComponent = {
-  view(vnode) {
-    const { name } = vnode.attrs;
-    return m('div', { class: `${row} ${playerTile}` },
-      m('div', { class: playerIcon }),
-      m('span', name));
-  },
-};
-
-const SixteenNineComponent = {
+class SixteenNineComponent {
   view() {
-    return m('div', { class: container },
+    return m('div', { class: `${graphic} ${background}` },
       m('div', { class: game }),
       m('div', { class: camera }),
       m('div', { class: `${column} ${sponsors}` },
@@ -52,10 +45,10 @@ const SixteenNineComponent = {
           m('div', safeRun().release),
           m('span', '·'),
           m('div', safeRun().category))),
-      m('div', { class: `${row} ${playerDetails}` },
-        ...safeRun().teams[0].players.map((player) => m(PlayerTileComponent, player))));
-  },
-};
+      m('div', { class: playerDetailsContainer },
+        m(PlayerDetailsComponent, { players: safeRun().teams[0].players })));
+  }
+}
 
 window.NodeCG.waitForReplicants(timerRep, runRep).then(() => {
   m.mount(document.body, SixteenNineComponent);

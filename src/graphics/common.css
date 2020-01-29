@@ -54,3 +54,8 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
+.graphic {
+  width: 1920px; height: 972px;
+  position: relative;
+}
