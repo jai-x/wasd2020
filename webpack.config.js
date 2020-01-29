@@ -14,14 +14,12 @@ const gfxSrcs = gfxSrcFolders.map(gfxSrc => ({
 
 const srcs = gfxSrcs;
 
-console.log(srcs);
-
 module.exports = srcs.map(src => ({
   entry: src.entry,
 
   output: { path: src.outputFolder, filename: 'bundle.js' },
 
-  stats: 'minimal',
+  stats: 'errors-warnings',
 
   plugins: [
     new MiniCssExtractPlugin(),
@@ -32,7 +30,7 @@ module.exports = srcs.map(src => ({
     rules: [
       { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader?modules'] },
       { test: /\.js$/, exclude: /node_modules/, loader: 'eslint-loader' },
-      { test: /\.(otf|ttf)$/, loader: 'file-loader' },
+      { test: /\.(png|otf|ttf)$/, loader: 'file-loader' },
     ]
   },
 }));

@@ -4,8 +4,8 @@
   "description": "A nodecg broadcast graphics bundler for Warwicks Awesome Speedruns & Demos 2020",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production --progress",
+    "dev": "webpack --mode development --watch --progress",
     "clean": "rm -rf graphics dashboard",
     "nodecg": "node ../../index.js"
   },
