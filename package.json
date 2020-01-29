@@ -46,6 +46,12 @@
         "width": 1920,
         "height": 972,
         "singleInstance": false
+      },
+      {
+        "file": "break/index.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
       }
     ]
   },

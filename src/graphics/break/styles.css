@@ -1,0 +1,11 @@
+.container {
+  width: 1920px;
+  height: 1080px;
+  background: linear-gradient(
+    230deg,
+    var(--wasd-white),
+    var(--wasd-blue-2),
+    var(--wasd-blue-3),
+    var(--wasd-purple)
+  );
+}
