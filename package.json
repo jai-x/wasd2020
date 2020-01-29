@@ -14,6 +14,7 @@
   "dependencies": {
     "css-loader": "^3.4.2",
     "eslint-loader": "^3.0.3",
+    "file-loader": "^5.0.2",
     "gsap": "^3.0.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
@@ -30,6 +31,12 @@
     "graphics": [
       {
         "file": "bar/index.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "sixteenNine/index.html",
         "width": 1920,
         "height": 1080,
         "singleInstance": false

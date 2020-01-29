@@ -1,5 +1,6 @@
 import m from 'mithril';
 // import { gsap } from 'gsap';
+import '../common.css';
 import {
   barContainer, barLeft, barRight, barCenter,
 } from './styles.css';
