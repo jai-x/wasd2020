@@ -38,7 +38,13 @@
       {
         "file": "sixteenNine/index.html",
         "width": 1920,
-        "height": 1080,
+        "height": 972,
+        "singleInstance": false
+      },
+      {
+        "file": "fourThree/index.html",
+        "width": 1920,
+        "height": 972,
         "singleInstance": false
       }
     ]

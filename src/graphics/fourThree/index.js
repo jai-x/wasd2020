@@ -27,7 +27,7 @@ const blankRun = {
 
 const safeRun = () => (runRep.value || blankRun);
 
-class SixteenNineComponent {
+class FourThreeComponent {
   view() {
     return m('div', { class: `${graphic} ${background}` },
       m('div', { class: game }),
@@ -50,7 +50,7 @@ class SixteenNineComponent {
 }
 
 window.NodeCG.waitForReplicants(timerRep, runRep).then(() => {
-  m.mount(document.body, SixteenNineComponent);
+  m.mount(document.body, FourThreeComponent);
 });
 
 

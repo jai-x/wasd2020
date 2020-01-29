@@ -1,16 +1,15 @@
 import m from 'mithril';
-// import { gsap } from 'gsap';
 import '../common.css';
 import {
-  barContainer, barLeft, barRight, barCenter,
+  container, left, right, center,
 } from './styles.css';
 
 class TestComponent {
   view() {
-    return m('div', { class: barContainer },
-      m('div', { class: barLeft }, 'Left'),
-      m('div', { class: barCenter }, 'Center'),
-      m('div', { class: barRight }, 'Right'));
+    return m('div', { class: container },
+      m('div', { class: left }, 'Left'),
+      m('div', { class: center }, 'Center'),
+      m('div', { class: right }, 'Right'));
   }
 }
 
