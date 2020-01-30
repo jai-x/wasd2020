@@ -1,0 +1,28 @@
+.timerContainer {
+  position: relative;
+}
+
+.timerFlash {
+  position: absolute;
+  background-color: var(--wasd-blue-4);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.timerText {
+  position: relative;
+  font-family: 'DaggerSquareOblique';
+  color: var(--wasd-white);
+  font-size: 75px;
+  padding: 0 35px;
+}
+
+.timerTextSmall {
+  position: relative;
+  font-family: 'DaggerSquareOblique';
+  color: var(--wasd-white);
+  font-size: 65px;
+  padding: 0 35px;
+}

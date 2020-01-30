@@ -51,10 +51,6 @@
   border-image: linear-gradient(to right, transparent, var(--wasd-white), transparent) 1;
 }
 
-.timerText {
-  font-size: 70px;
-}
-
 .timerEstimate {
   font-size: 20px;
 }

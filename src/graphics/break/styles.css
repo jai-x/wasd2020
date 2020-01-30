@@ -1,11 +1,92 @@
+* {
+  /* border: 1px red solid; */
+}
+
 .container {
-  width: 1920px;
-  height: 1080px;
   background: linear-gradient(
-    230deg,
+    190deg,
     var(--wasd-white),
     var(--wasd-blue-2),
     var(--wasd-blue-3),
     var(--wasd-purple)
   );
+}
+
+.left {
+  top: 70px; left: 100px;
+  position: absolute;
+  width: 600px;
+  height: 832px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wasdIso {
+  width: 200px; height: 200px;
+  background-image: url('./wasd-512.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.wasdFlat {
+  width: 200px; height: 200px;
+  background-image: url('./wasd-logo.svg');
+  background-position: center;
+  background-size: cover;
+  color: var(--wasd-white);
+}
+
+.subtitle {
+  color: var(--wasd-white);
+  font-family: 'DaggerSquareOblique';
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.cam {
+  width: 100%;
+  height: 350px;
+  background-color: var(--chroma-green);
+  border: 3px solid var(--wasd-grey-2);
+  margin-bottom: 5px;
+}
+
+.live {
+  color: var(--wasd-white);
+  font-family: 'DaggerSquareOblique';
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.nowPlaying {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.spotify {
+  width: 35px; height: 35px;
+  background-image: url('./spotify-white.png');
+  background-position: center;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.songDetails {
+  color: var(--wasd-white);
+  font-family: 'DaggerSquareOblique';
+  font-size: 30px;
+}
+
+.right {
+  top: 70px; right: 100px;
+  position: absolute;
+  width: 600px;
+  height: 832px;
 }
