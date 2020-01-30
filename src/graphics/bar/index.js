@@ -1,15 +1,21 @@
 import m from 'mithril';
 import '../common.css';
-import {
-  container, left, right, center,
-} from './styles.css';
+import { container } from './styles.css';
+
+const pathString = 'M0,50 '
+                 + 'C640,-25 '
+                 + '500,90 '
+                 + '1920,30 '
+                 + 'L1920,50 '
+                 + 'L0,50 Z';
+
+
 
 class TestComponent {
   view() {
     return m('div', { class: container },
-      m('div', { class: left }, 'Left'),
-      m('div', { class: center }, 'Center'),
-      m('div', { class: right }, 'Right'));
+      m('svg', { viewBox: '0 0 1920 50' },
+        m('path', { d: pathString, style: 'stroke: none; fill: var(--wasd-purple);' })));
   }
 }
 
