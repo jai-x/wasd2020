@@ -7,14 +7,11 @@
 ```shell
 $ cd nodecg/bundles
 $ git clone git@github.com:speedcontrol/nodecg-speedcontrol.git
-$ cd nodecg/bundles/nodecg-speedcontrol
-$ npm install
-$ cd nodecg/bundles
 $ git clone git@github.com:daniellockard/nodecg-tiltify.git
-$ cd nodecg/bundles/nodecg-tiltify
-$ npm install
+$ git clone git@github.com:EwanLyon/ncg-spotify.git
+$ # and then run `npm install` inside each of these cloned directories
 ```
-* Install and build this bundle into `nodecg/bundles`
+* Install this bundle into `nodecg/bundles` and then build resources
 ```shell
 $ cd nodecg/bundles
 $ git clone git@github.com:jai-x/wasd2020.git
