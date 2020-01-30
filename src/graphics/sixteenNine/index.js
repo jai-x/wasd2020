@@ -1,9 +1,11 @@
 import m from 'mithril';
+
 import PlayerDetailsComponent from '../playerDetails';
+import TimerComponent from '../timer';
 
 import { row, column, graphic } from '../common.css';
 import {
-  background, game, camera, sponsors, sponsorsInset, timer, timerText,
+  background, game, camera, sponsors, sponsorsInset, timer,
   timerEstimate, runDetails, runGame, runMoreDetails,
 } from './styles.css';
 
@@ -36,7 +38,7 @@ class SixteenNineComponent {
       m('div', { class: `${column} ${sponsors}` },
         m('div', { class: sponsorsInset })),
       m('div', { class: `${column} ${timer}` },
-        m('div', { class: timerText }, timerRep.value.time),
+        m(TimerComponent, { timerRep }),
         m('div', { class: timerEstimate }, `Estimate: ${safeRun().estimate}`)),
       m('div', { class: `${column} ${runDetails}` },
         m('div', { class: runGame }, safeRun().game),
@@ -52,7 +54,6 @@ class SixteenNineComponent {
 window.NodeCG.waitForReplicants(timerRep, runRep).then(() => {
   m.mount(document.body, SixteenNineComponent);
 });
-
 
 timerRep.on('change', () => { m.redraw(); });
 runRep.on('change', () => { m.redraw(); });

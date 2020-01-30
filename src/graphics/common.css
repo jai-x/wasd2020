@@ -30,11 +30,13 @@ body {
   --wasd-blue-1: #A4F4FF;
   --wasd-blue-2: #57EDFF;
   --wasd-blue-3: #3C99FF;
+  --wasd-blue-4: #504BDF;
   --wasd-white: #EEF6FF;
   --wasd-grey-1: #4A4A4A;
   --wasd-grey-2: #363636;
   --wasd-purple: #8896FF;
   --chroma-green: #00FF00;
+  --chroma-orange: #FF8000;
 }
 
 * {

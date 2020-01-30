@@ -1,4 +1,12 @@
 {
-  "twitch": { "enabled": false },
+  "twitch": {
+    "enabled": true,
+    "clientID": "",
+    "clientSecret": "",
+    "redirectURI": "http://localhost:9090/nodecg-speedcontrol/twitchauth",
+    "channelName": "",
+    "streamTitle": "🔴 WASD 2020 - Raising money for SpecialEffect: {{game}} - {{category}}",
+    "streamDefaultGame": "Games + Demos"
+  },
   "schedule": { "ignoreGamesWhileImporting": [ "WASD" ] }
 }

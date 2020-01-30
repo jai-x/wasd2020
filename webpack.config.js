@@ -30,6 +30,7 @@ module.exports = srcs.map(src => ({
     rules: [
       { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader?modules'] },
       { test: /\.js$/, exclude: /node_modules/, loader: 'eslint-loader' },
+      { test: /\.svg$/, loader: 'url-loader' },
       { test: /\.(png|otf|ttf)$/, loader: 'file-loader' },
     ]
   },

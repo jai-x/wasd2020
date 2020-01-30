@@ -50,10 +50,6 @@
   color: var(--wasd-white);
 }
 
-.timerText {
-  font-size: 75px;
-}
-
 .timerEstimate {
   font-size: 22px;
 }
