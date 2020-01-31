@@ -1,6 +1,6 @@
 {
   "twitch": {
-    "enabled": true,
+    "enabled": false,
     "clientID": "",
     "clientSecret": "",
     "redirectURI": "http://localhost:9090/nodecg-speedcontrol/twitchauth",
