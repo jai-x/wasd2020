@@ -1,6 +1,7 @@
 import m from 'mithril';
 
 import PlayerDetailsComponent from '../playerDetails';
+import SponsorSlideshowComponent from '../sponsorSlideshow';
 import TimerComponent from '../timer';
 
 import { verticalSpacer, graphic } from '../common.css';
@@ -51,6 +52,7 @@ class SixteenNineComponent {
         m(PlayerDetailsComponent, { players: safeRun().teams[0].players })),
       m('div', { class: sponsorsArea },
         m('div', { class: verticalSpacer }),
+        m(SponsorSlideshowComponent),
         m('div', { class: verticalSpacer })));
   }
 }
