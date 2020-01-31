@@ -6,17 +6,19 @@
     var(--wasd-blue-3),
     var(--wasd-purple)
   );
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 100px;
 }
 
-.left {
-  top: 70px; left: 100px;
-  position: absolute;
-  width: 600px;
-  height: 832px;
-
+.breakContent {
+  flex: 1;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px
 }
 
 .wasdIso {
@@ -29,25 +31,29 @@
 .subtitle {
   color: var(--wasd-white);
   font-family: 'DaggerSquareOblique';
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
   margin-bottom: 10px;
 }
 
 .cam {
   width: 100%;
-  height: 350px;
+  height: 450px;
   background-color: var(--chroma-green);
   border: 3px solid var(--wasd-grey-2);
   margin-bottom: 5px;
+  position: relative;
 }
 
 .live {
   color: var(--wasd-white);
-  font-family: 'DaggerSquareOblique';
+  font-family: 'MontserratBold';
   font-size: 22px;
-  text-align: center;
-  margin-bottom: 50px;
+  position: absolute;
+  bottom: 10px; left: 10px;
+  padding: 10px;
+  background: linear-gradient(to right, var(--wasd-purple), var(--wasd-blue-3));
+  border-radius: 5px;
 }
 
 .nowPlaying {
@@ -70,11 +76,4 @@
   color: var(--wasd-white);
   font-family: 'DaggerSquareOblique';
   font-size: 30px;
-}
-
-.right {
-  top: 70px; right: 100px;
-  position: absolute;
-  width: 600px;
-  height: 832px;
 }
