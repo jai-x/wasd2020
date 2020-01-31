@@ -16,6 +16,7 @@ export default class PlayerDetailsComponent {
   view(vnode) {
     const { players } = vnode.attrs;
 
-    return m('div', { class: playerDetails }, ...players.map((p) => m(PlayerTile, p)));
+    return m('div', { class: playerDetails },
+      ...players.map((p) => m(PlayerTile, p)));
   }
 }

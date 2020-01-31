@@ -9,8 +9,6 @@ const pathString = 'M0,50 '
                  + 'L1920,50 '
                  + 'L0,50 Z';
 
-
-
 class TestComponent {
   view() {
     return m('div', { class: container },

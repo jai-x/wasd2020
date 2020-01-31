@@ -13,19 +13,6 @@
   src: url('./montserrat-bold.ttf') format('truetype');
 }
 
-html {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
 :root {
   --wasd-blue-1: #A4F4FF;
   --wasd-blue-2: #57EDFF;
@@ -41,23 +28,39 @@ body {
 
 * {
   box-sizing: border-box;
+  /* border: 1px red solid; */
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+html {
+  width: 100%;
+  height: 100%;
 }
 
-.column {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .graphic {
   width: 1920px; height: 972px;
   position: relative;
+}
+
+.verticalSpacer {
+  height: 75%;
+  width: 4px;
+  background-color: var(--wasd-white);
+  border-radius: 4px;
+  opacity: 0.75;
+}
+
+.horizontalSpacer{
+  width: 75%;
+  height: 4px;
+  background-color: var(--wasd-white);
+  border-radius: 4px;
+  opacity: 0.75;
 }
