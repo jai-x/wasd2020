@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'DaggerSquareOblique';
-  src: url('./daggersquare-oblique.otf') format('opentype');
+  src: url('./assets/daggersquare-oblique.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'UbuntuMono';
-  src: url('./ubuntumono-regular.ttf') format('truetype');
+  src: url('./assets/ubuntumono-regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'MontserratBold';
-  src: url('./montserrat-bold.ttf') format('truetype');
+  src: url('./assets/montserrat-bold.ttf') format('truetype');
 }
 
 :root {

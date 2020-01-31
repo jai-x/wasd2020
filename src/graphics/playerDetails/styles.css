@@ -23,7 +23,7 @@
 
 .playerIcon {
   width: 27px; height: 27px;
-  background-image: url('./player.png');
+  background-image: url('../assets/player.png');
   background-position: center;
   background-size: cover;
   margin-right: 15px;

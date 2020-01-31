@@ -1,12 +1,12 @@
 import m from 'mithril';
-import { row } from '../common.css';
+import '../common.css';
 import { playerDetails, playerTile, playerIcon } from './styles.css';
 
 class PlayerTile {
   view(vnode) {
     const { name } = vnode.attrs;
 
-    return m('div', { class: `${row} ${playerTile}` },
+    return m('div', { class: playerTile },
       m('div', { class: playerIcon }),
       m('span', name));
   }

@@ -2,6 +2,7 @@ import m from 'mithril';
 
 import PlayerDetailsComponent from '../playerDetails';
 import TimerComponent from '../timer';
+import SponsorSlideshowComponent from '../sponsorSlideshow';
 
 import { graphic, verticalSpacer, horizontalSpacer } from '../common.css';
 import {
@@ -37,6 +38,7 @@ class FourThreeComponent {
         m(PlayerDetailsComponent, { players: safeRun().teams[0].players })),
       m('div', { class: sponsorsArea },
         m('div', { class: verticalSpacer }),
+        m(SponsorSlideshowComponent),
         m('div', { class: verticalSpacer })),
       m('div', { class: leftColumn },
         m('div', { class: runDetails },

@@ -1,0 +1,41 @@
+.container {
+  width: 100%; height: 100%;
+  margin: 50px;
+  position: relative;
+}
+
+.sponsor {
+  width: 100%; height: 100%;
+  position: absolute;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.nse {
+  background-image: url('../assets/sponsors/NSE_notext_LARGE.png');
+}
+
+.endgameGear {
+  background-image: url('../assets/sponsors/Endgame_Gear-Logo-White.png');
+}
+
+.belong {
+  background-image: url('../assets/sponsors/belong-logo-2019-white.png');
+}
+
+.kolink {
+  background-image: url('../assets/sponsors/Kolink-Logo-White.png');
+}
+
+.noblechairs {
+  background-image: url('../assets/sponsors/logo_noblechairs-horizontal-white.png');
+}
+
+.monster {
+  background-image: url('../assets/sponsors/monster.webp');
+}
+
+.overclockers {
+  background-image: url('../assets/sponsors/OverclockersUK_Black.png');
+}
