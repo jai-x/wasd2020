@@ -3,10 +3,10 @@ import m from 'mithril';
 import PlayerDetailsComponent from '../playerDetails';
 import TimerComponent from '../timer';
 
-import { row, column, graphic } from '../common.css';
+import { graphic, verticalSpacer, horizontalSpacer } from '../common.css';
 import {
-  background, game, camera, sponsors, sponsorsInset, timer,
-  timerEstimate, runDetails, runGame, runMoreDetails,
+  background, game, camera, sponsorsArea, timerArea, timerEstimate, runDetails,
+  runGame, runDetailsRow, leftColumn,
 } from './styles.css';
 
 const timerRep = window.NodeCG.Replicant('timer', 'nodecg-speedcontrol');
@@ -35,19 +35,22 @@ class FourThreeComponent {
       m('div', { class: game }),
       m('div', { class: camera },
         m(PlayerDetailsComponent, { players: safeRun().teams[0].players })),
-      m('div', { class: `${column} ${sponsors}` },
-        m('div', { class: sponsorsInset })),
-      m('div', { class: `${column} ${timer}` },
-        m(TimerComponent, { small: true, timerRep }),
-        m('div', { class: timerEstimate }, `Estimate: ${safeRun().estimate}`)),
-      m('div', { class: `${column} ${runDetails}` },
-        m('div', { class: runGame }, safeRun().game),
-        m('div', { class: `${row} ${runMoreDetails}` },
-          m('div', safeRun().system),
-          m('span', '·'),
-          m('div', safeRun().release),
-          m('span', '·'),
-          m('div', safeRun().category))));
+      m('div', { class: sponsorsArea },
+        m('div', { class: verticalSpacer }),
+        m('div', { class: verticalSpacer })),
+      m('div', { class: leftColumn },
+        m('div', { class: runDetails },
+          m('div', { class: runGame }, safeRun().game),
+          m('div', { class: runDetailsRow },
+            m('div', safeRun().system),
+            m('div', '·'),
+            m('div', safeRun().release),
+            m('div', '·'),
+            m('div', safeRun().category))),
+        m('div', { class: horizontalSpacer }),
+        m('div', { class: timerArea },
+          m(TimerComponent, { small: true, timerRep }),
+          m('div', { class: timerEstimate }, `Estimate: ${safeRun().estimate}`))));
   }
 }
 

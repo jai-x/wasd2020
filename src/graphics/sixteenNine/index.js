@@ -3,10 +3,11 @@ import m from 'mithril';
 import PlayerDetailsComponent from '../playerDetails';
 import TimerComponent from '../timer';
 
-import { row, column, graphic } from '../common.css';
+import { verticalSpacer, graphic } from '../common.css';
 import {
-  background, game, camera, sponsors, sponsorsInset, timer,
-  timerEstimate, runDetails, runGame, runMoreDetails,
+  background, game, camera, sponsorsArea,
+  timerEstimate, runDetails, runGame, bottomRow, runDetailRow,
+  timerArea,
 } from './styles.css';
 
 const timerRep = window.NodeCG.Replicant('timer', 'nodecg-speedcontrol');
@@ -32,22 +33,25 @@ const safeRun = () => (runRep.value || blankRun);
 class SixteenNineComponent {
   view() {
     return m('div', { class: `${graphic} ${background}` },
+      m('div', { class: bottomRow },
+        m('div', { class: runDetails },
+          m('div', { class: runGame }, safeRun().game),
+          m('div', { class: runDetailRow },
+            m('div', safeRun().system),
+            m('div', '·'),
+            m('div', safeRun().release),
+            m('div', '·'),
+            m('div', safeRun().category))),
+        m('div', { class: verticalSpacer }),
+        m('div', { class: timerArea },
+          m(TimerComponent, { timerRep }),
+          m('div', { class: timerEstimate }, `Estimate: ${safeRun().estimate}`))),
       m('div', { class: game }),
       m('div', { class: camera },
         m(PlayerDetailsComponent, { players: safeRun().teams[0].players })),
-      m('div', { class: `${column} ${sponsors}` },
-        m('div', { class: sponsorsInset })),
-      m('div', { class: `${column} ${timer}` },
-        m(TimerComponent, { timerRep }),
-        m('div', { class: timerEstimate }, `Estimate: ${safeRun().estimate}`)),
-      m('div', { class: `${column} ${runDetails}` },
-        m('div', { class: runGame }, safeRun().game),
-        m('div', { class: `${row} ${runMoreDetails}` },
-          m('div', safeRun().system),
-          m('span', '·'),
-          m('div', safeRun().release),
-          m('span', '·'),
-          m('div', safeRun().category))));
+      m('div', { class: sponsorsArea },
+        m('div', { class: verticalSpacer }),
+        m('div', { class: verticalSpacer })));
   }
 }
 

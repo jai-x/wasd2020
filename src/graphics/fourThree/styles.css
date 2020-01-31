@@ -17,13 +17,23 @@
   border-left: 3px solid var(--wasd-grey-2);
 }
 
-.runDetails {
+.leftColumn {
+  position: absolute;
+  top: 0px; left: 0px;
+  width: 624px; height: 270px;
   font-family: 'DaggerSquareOblique';
   color: var(--wasd-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  position: absolute;
-  left: 0px; top: 0px;
-  width: 624px; height: 140px;
+.runDetails {
+  width: 100%; height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .runGame {
@@ -31,24 +41,24 @@
   margin-bottom: 7px;
 }
 
-.runMoreDetails {
+.runDetailsRow {
   font-size: 27px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.runMoreDetails span {
+.runDetailsRow div {
   margin: 0 10px;
 }
 
-.timer {
-  font-family: 'DaggerSquareOblique';
-  color: var(--wasd-white);
-
-  position: absolute;
-  left: 0px; top: 140px;
-  width: 624px; height: 130px;
-
-  border-top: 5px solid;
-  border-image: linear-gradient(to right, transparent, var(--wasd-white), transparent) 1;
+.timerArea {
+  width: 100%; flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .timerEstimate {
@@ -64,14 +74,13 @@
   border-bottom: 3px solid var(--wasd-grey-2);
 }
 
-.sponsors {
+.sponsorsArea {
   position: absolute;
   bottom: 0px; left: 0px;
   width: 624px; height: 302px;
-}
-
-.sponsorsInset {
-  width: 90%; height: 90%;
-  border: 5px solid;
-  border-image: linear-gradient(transparent, var(--wasd-white), transparent) 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
