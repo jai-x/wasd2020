@@ -94,3 +94,4 @@ window.NodeCG.waitForReplicants(songRep, challengeRep, runArrayRep, runActiveRep
 
 songRep.on('change', () => { m.redraw(); });
 runActiveRep.on('change', () => { m.redraw(); });
+challengeRep.on('change', () => { m.redraw(); });
