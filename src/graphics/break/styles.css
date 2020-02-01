@@ -80,12 +80,32 @@
   font-size: 30px;
 }
 
-.nextRuns {
-  width: 100%;
-  height: 250px;
+.label {
+  color: var(--wasd-white);
+  font-family: 'DaggerSquareOblique';
+  font-size: 30px;
+  margin: 30px;
 }
 
-.nextRunItem {
+.nextRunContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--wasd-white);
+  font-family: 'DaggerSquareOblique';
+  background-color: var(--wasd-purple);
+  padding: 5px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.nextRunTop {
+  font-size: 35px;
+}
+
+.nextRunBottom {
+  font-size: 30px;
 }
 
 .challenge {
