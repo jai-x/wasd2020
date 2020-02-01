@@ -11,8 +11,10 @@ const totalRep = window.NodeCG.Replicant('total', 'nodecg-tiltify');
 class TimeComponent {
   view() {
     const now = new Date();
+    const hour = now.getHours().toString().padStart(2, '0');
+    const mins = now.getMinutes().toString().padStart(2, '0');
 
-    return m('div', { class: time }, `${now.getHours()}:${now.getMinutes()}`);
+    return m('div', { class: time }, `${hour}:${mins}`);
   }
 }
 
