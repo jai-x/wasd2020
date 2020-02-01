@@ -43,7 +43,7 @@ class DonationChallengeComponent {
     const bar = vnode.dom.children[1].children[1];
 
     gsap.to(bar, {
-      width: `${(totalAmountRaised / amount) * 100}%`,
+      width: `${Math.min((totalAmountRaised / amount) * 100, 100)}%`,
       ease: 'expo.out',
       duration: 3,
     });
@@ -54,7 +54,10 @@ class ChallengesComponent {
   view() {
     const now = Date.now();
 
-    const available = challengeRep.value.filter((c) => (c.active && now < c.endsAt)).slice(0, 3);
+    const available = challengeRep.value
+      .filter((c) => (c.active && now < c.endsAt))
+      .sort((c1, c2) => c1.endsAt - c2.endsAt)
+      .slice(0, 3);
 
     if (available.count < 1) {
       return null;
