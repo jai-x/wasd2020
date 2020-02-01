@@ -51,7 +51,7 @@ class BarComponent {
       m('div', { class: wasdIso }),
       m('div', { class: verticalSpacer }),
       m('div', { class: specialEffect }),
-      m('div', { class: total }, `£${totalRep.value}`),
+      m('div', { class: total }, `£${Math.floor(totalRep.value)}`),
       m('div', { class: verticalSpacer }),
       m(CTAComponent),
       m('div', { class: verticalSpacer }),
