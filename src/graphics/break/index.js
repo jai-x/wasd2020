@@ -38,7 +38,7 @@ class DonationChallengeComponent {
         m('div', { class: challengeProgress })));
   }
 
-  oncreate(vnode) {
+  onupdate(vnode) {
     const { totalAmountRaised, amount } = vnode.attrs;
     const bar = vnode.dom.children[1].children[1];
 
