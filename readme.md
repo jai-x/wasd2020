@@ -1,8 +1,14 @@
 ## wasd2020 NodeCg bundle
 
+This is a nodecg graphics bundle created to be used in Warwick Awesome Speedruns
+& Demos 2020.
+
+See it in action in the [WASD 2020
+vods](https://www.youtube.com/watch?v=Orq2aWMJUQ0&list=PL0cMFmWyMFGLamFzlu_7eJnV8X_3pLdvS)
+
 ### Installation
 
-* Have a working version of nodecg on the system
+* Have a working version of [nodecg](https://nodecg.dev) on the system
 * Install `nodecg-speedcontrol` and `nodecg-tiltify` into `nodecg/bundles`
 ```shell
 $ cd nodecg/bundles
